@@ -60,9 +60,10 @@ class TwitterBot():
         #I included this array to help clean data later
         dirtyArray = ['Quote Tweet', 'Promoted', 'Show this thread', '', '\n', ' ']
         numDataLines = 0
-        while numDataLines < desiredNum:
+        while numDataLines < desiredNum and oldDataLines != dataLines:
 
-            sleep(3)
+            oldDataLines = dataLines
+            sleep(1)
             #all these are different types of data that I do not want to pick up.
             dirtyData = self.driver.find_elements_by_xpath("//div[@class='css-1dbjc4n r-1d09ksm r-18u37iz r-1wbh5a2']")
             dirtyData2 = self.driver.find_elements_by_xpath("//div[@class = 'css-1dbjc4n r-18u37iz r-1wtj0ep r-156q2ks r-1mdbhws']")
@@ -112,8 +113,8 @@ class TwitterBot():
                     except Exception:
                         print('This data point not encodable.')
 
-            oldDataLines = dataLines
             height = self.driver.execute_script("return document.documentElement.scrollHeight")
             self.driver.execute_script("window.scrollTo(0, " + str(height) + ");")
+
         tweetsFile.close()
         return allLines
