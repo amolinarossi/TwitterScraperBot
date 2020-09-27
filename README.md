@@ -9,6 +9,7 @@ The following functionalities are currently available:
   
 Setup:
 Microsoft Edge Browser at https://www.microsoft.com/edge
+
 MSEdge Webdriver at https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
   must be the same version as your MSEdge browser.
   place this download in the same folder as the TwitterScraperBot.py file
