@@ -8,6 +8,7 @@ The following functionalities are currently available:
   scraping tweets
   
 Setup:
+
 Microsoft Edge Browser at https://www.microsoft.com/edge
 
 MSEdge Webdriver at https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
